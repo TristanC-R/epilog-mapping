@@ -95,3 +95,10 @@ export const DEFAULT_BASEMAP_ID: BasemapId = "streets";
 export function getBasemap(id: BasemapId): BasemapOption {
   return BASEMAPS.find((basemap) => basemap.id === id) ?? BASEMAPS[0];
 }
+
+/** Initial view: Upminster Cemetery (Upminster, Essex). */
+export const UPMINSTER_VIEW = {
+  longitude: 0.26035,
+  latitude: 51.54476,
+  zoom: 18,
+} as const;

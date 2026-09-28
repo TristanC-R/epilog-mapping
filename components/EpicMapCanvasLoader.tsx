@@ -2,14 +2,11 @@
 
 import dynamic from "next/dynamic";
 
-const EpicMapWorkspace = dynamic(
-  () => import("@/components/EpicMapWorkspace"),
-  {
-    ssr: false,
-    loading: () => <div className="map-shell" aria-hidden />,
-  },
-);
+const MapApp = dynamic(() => import("@/components/MapApp"), {
+  ssr: false,
+  loading: () => <div className="map-shell" aria-hidden />,
+});
 
-export default function EpicMapCanvasLoader() {
-  return <EpicMapWorkspace />;
+export default function MapAppLoader() {
+  return <MapApp />;
 }
