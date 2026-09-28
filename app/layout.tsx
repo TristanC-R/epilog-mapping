@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
@@ -16,8 +10,7 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Epic Mapping",
-  description:
-    "Lightweight GIS for cemetery digitising and spatial workflows.",
+  description: "Full-screen MapLibre mapping.",
 };
 
 export default function RootLayout({
@@ -26,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={sourceSans.variable}>
       <body>{children}</body>
     </html>
   );

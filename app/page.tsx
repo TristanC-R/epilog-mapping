@@ -1,9 +1,9 @@
-import EpicMapCanvasLoader from "@/components/EpicMapCanvasLoader";
+import MapAppLoader from "@/components/EpicMapCanvasLoader";
 
 export default function Home() {
   return (
     <main className="app-shell">
-      <EpicMapCanvasLoader />
+      <MapAppLoader />
     </main>
   );
 }
